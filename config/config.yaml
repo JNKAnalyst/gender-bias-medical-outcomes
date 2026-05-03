@@ -1,0 +1,13 @@
+data:
+  mimic_path: "/dbfs/mnt/mimic-iv/"
+  output_path: "/dbfs/mnt/results/"
+
+model:
+  test_size: 0.2
+  random_state: 42
+  cv_folds: 5
+
+fairness:
+  protected_attribute: "gender"
+  positive_label: 1
+  threshold: 0.5
