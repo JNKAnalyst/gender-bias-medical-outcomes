@@ -23,6 +23,9 @@ This project builds scalable PySpark ML pipelines in Databricks to process large
 ```
 gender-bias-medical-outcomes/
 ├── README.md
+├── docs/
+│   ├── methodology.md
+│   └── data_access.md
 ├── notebooks/
 │   ├── 01_data_preprocessing.ipynb
 │   ├── 02_feature_engineering.ipynb
@@ -30,6 +33,9 @@ gender-bias-medical-outcomes/
 │   └── 04_fairness_analysis.ipynb
 ├── src/
 │   ├── pipeline.py
+│   ├── data_preprocessing.py
+│   ├── feature_engineering.py
+│   ├── models.py
 │   ├── fairness_metrics.py
 │   └── utils.py
 ├── config/
@@ -109,7 +115,7 @@ DATA_PATH=/dbfs/mnt/mimic-iv/
 
 ```bash
 # Run full pipeline locally (requires PySpark)
-python src/pipeline.py --config config/config.yaml
+python -m src.pipeline --config config/config.yaml
 
 # Or run notebooks sequentially in Databricks:
 # 01 → 02 → 03 → 04
@@ -134,6 +140,10 @@ This project uses the **MIMIC-IV** clinical dataset. Access requires:
 1. Complete CITI training
 2. Sign the data use agreement on [PhysioNet](https://physionet.org/content/mimiciv/)
 3. Download and place data in the path specified in `config.yaml`
+
+See [`docs/data_access.md`](docs/data_access.md) for a step-by-step guide and
+[`docs/methodology.md`](docs/methodology.md) for cohort definition, evaluation
+metrics, and bias-mitigation strategies.
 
 ## Author
 

@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Spark / Databricks
+metastore_db/
+derby.log
+spark-warehouse/
+*.crc
+
+# Data — never commit MIMIC-IV or derived artifacts
+data/
+results/
+*.parquet
+*.csv
+
+# Secrets & local config
+.env
+.env.local
+*.token
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
