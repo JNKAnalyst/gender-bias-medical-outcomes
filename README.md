@@ -147,5 +147,5 @@ metrics, and bias-mitigation strategies.
 
 ## Author
 
-**Joash** | MS Business Analytics  
+**Joash**  
 [GitHub](https://github.com/JNKAnalyst) | [Portfolio](https://jnkanalyst.github.io/portfolio/)
